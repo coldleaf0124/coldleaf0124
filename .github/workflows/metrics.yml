@@ -1,0 +1,40 @@
+name: Metrics
+on:
+  # 毎日0時に自動更新
+  schedule: [{cron: "0 0 * * *"}]
+  # 手動実行やコードをプッシュした際にも更新
+  workflow_dispatch:
+  push: {branches: ["master", "main"]}
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # GitHubが標準で用意しているトークンを使用します
+          token: ${{ secrets.GITHUB_TOKEN }}
+          
+          # 基本設定
+          user: coldleaf0124
+          template: classic
+          base: header, activity, community, repositories, metadata
+          config_timezone: Asia/Tokyo
+          
+          # 言語ごとの割合（バーと円グラフ）を表示
+          plugin_languages: yes
+          plugin_languages_limit: 8 # 上位8言語まで
+          plugin_languages_details: bytes-size, percentage
+          
+          # 立体的な草（isocalendar）を表示
+          plugin_isocalendar: yes
+          plugin_isocalendar_duration: half-year
+          
+          # アクティビティのレーダーチャート（Habits）
+          plugin_habits: yes
+          plugin_habits_facts: no
+          plugin_habits_charts: yes
+          
+          # ファイルの出力先（この画像が作られます）
+          filename: github-metrics.svg
