@@ -2,10 +2,8 @@
 
 I'm a developer who enjoys creating Minecraft Mods and exploring new technologies.
 
-<!-- 
-  metrics.ymlによって、以下のコメントの間に自動でグラフが生成・挿入されます！
-  (GitHub Actionsが実行されると、自動的に書き換わります)
--->
-<!-- START_SECTION:metrics -->
-ここに後ほどグラフ画像が自動で表示されます！
-<!-- END_SECTION:metrics -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="github-metrics.svg">
+  <source media="(prefers-color-scheme: light)" srcset="github-metrics.svg">
+  <img alt="Metrics" src="github-metrics.svg">
+</picture>
