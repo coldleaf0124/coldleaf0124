@@ -5,7 +5,7 @@ I'm a developer who enjoys creating Minecraft Mods and exploring new technologie
 ### Languages I write
 <p>
   <a href="https://skillicons.dev">
-    <img src="https://skillicons.dev/icons?i=ts,py,java,js,c,html,go,ruby" />
+    <img src="https://skillicons.dev/icons?i=ts,py,java,js,c,cs,cpp,html,go,ruby" />
   </a>
 </p>
 
